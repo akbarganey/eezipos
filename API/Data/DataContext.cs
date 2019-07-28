@@ -9,5 +9,6 @@ namespace API.Data
         
         public DbSet<CSDSupplier> CSDSuppliers { get; set; }
         public DbSet<StockItem> StockItems { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

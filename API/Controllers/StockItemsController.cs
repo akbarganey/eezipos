@@ -2,11 +2,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
 using API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class StockItemsController : ControllerBase
@@ -25,6 +27,7 @@ namespace API.Controllers
         }
 
         // GET api/StockItems/5
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult>  GetStockItem(int id)
         {
