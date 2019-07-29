@@ -13,12 +13,13 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
 
 
+
 @NgModule({
    declarations: [
       AppComponent,
       NavComponent,
       HomeComponent,
-      RegisterComponent
+      RegisterComponent,
    ],
    imports: [
       BrowserModule,
